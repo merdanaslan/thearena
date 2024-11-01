@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { Home, Swords, Trophy, LayoutDashboard, Wallet, Bell, Menu, X, Users, Plus, ArrowLeft } from 'lucide-react'
-import { Button } from "@/components/ui/button"
+import { Button } from "../../src/components/ui/button"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Badge } from "@/components/ui/badge"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
