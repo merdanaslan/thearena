@@ -11,4 +11,60 @@
   body {
     @apply bg-black text-white;
   }
+}
+
+@layer utilities {
+  .bg-grid-pattern {
+    background-image: 
+      linear-gradient(to right, rgba(147, 112, 219, 0.8) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(147, 112, 219, 0.8) 1px, transparent 1px);
+    background-size: 100px 100px;
+  }
+
+  .glitch-text {
+    text-shadow: 
+      0 0 2px rgba(255,255,255,0.8),
+      0 0 4px rgba(147,112,219,0.5),
+      0 0 6px rgba(147,112,219,0.3);
+    animation: glitch 2s infinite;
+  }
+
+  .cyber-border {
+    @apply border border-indigo-500/30 shadow-[0_0_15px_rgba(147,112,219,0.2)];
+  }
+
+  .cyber-panel {
+    @apply bg-black/50 backdrop-blur-sm border border-indigo-500/20 rounded-lg;
+  }
+
+  .cyber-text {
+    @apply bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent;
+  }
+
+  .cyber-button {
+    @apply bg-indigo-900/50 text-indigo-300 hover:bg-indigo-800 
+           border border-indigo-500/50 transition-all duration-300
+           hover:shadow-[0_0_15px_rgba(147,112,219,0.3)];
+  }
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: 
+      0 0 2px rgba(255,255,255,0.8),
+      0 0 4px rgba(147,112,219,0.5),
+      0 0 6px rgba(147,112,219,0.3);
+  }
+  50% {
+    text-shadow: 
+      -1px 0 2px rgba(255,255,255,0.8),
+      1px -1px 4px rgba(147,112,219,0.5),
+      -1px 1px 6px rgba(147,112,219,0.3);
+  }
+  100% {
+    text-shadow: 
+      1px 0 2px rgba(255,255,255,0.8),
+      -1px 1px 4px rgba(147,112,219,0.5),
+      1px -1px 6px rgba(147,112,219,0.3);
+  }
 } 
